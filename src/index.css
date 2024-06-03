@@ -1,13 +1,67 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ .PhoneInputCountrySelect{
+   width: 70px;
+   outline: none;
+   background: transparent;
+  
+}
+/* *{
+    outline: 1px solid red;
+} */
+.PhoneInputInput{
+    outline: none;
+    background: transparent;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.PhoneInputCountry {
+    display: flex;
+}
+.PhoneInputCountry img{
+    width: 40px;
+    height: 30px;
+    
+    display: none;
+}
+.stars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px 20px 10px 20px;
+    border-radius: 0 0 0 20px;
+    color: #f5b754;
+    background: transparent;
+}
+.stars span {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+.stars i {
+    font-size: 10px;
+}
+.stars .shap-left-top {
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.testimonials .item .stars .shap-left-top svg {
+    width: 24px;
+    height: 24px;
+}
+.testimonials .item .stars .shap-right-bottom {
+    position: absolute;
+    bottom: -25px;
+    right: -2px;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.stars .shap-right-bottom svg {
+    width: 24px;
+    height: 24px;
 }

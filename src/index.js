@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ClerkProvider } from '@clerk/clerk-react';
 
+const publishableKey = 'pk_test_cGF0aWVudC10ZXJyaWVyLTU2LmNsZXJrLmFjY291bnRzLmRldiQ';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <ClerkProvider publishableKey={publishableKey}>
+
     <App />
+    </ClerkProvider>
   </React.StrictMode>
 );
 

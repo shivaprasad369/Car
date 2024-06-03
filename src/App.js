@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from 'react';
+import Container from './Components/Container';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import Search from './Components/Results/Search';
+import Searchs from './Components/Results/Search.jsx';
+import Results from './Components/Results/Result.jsx';
 
 function App() {
+  const [data,setData]=useState({
+    From:'',
+    To:'',
+    Type:'',
+    ReturnAt:'',
+    PickUp:'',
+    PickUpAt:''
+
+})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Container data={data} setData={setData} />}/>
+        
+          <Route path="search" element={<Searchs datas={data} setData={setData}/>} />
+          <Route path="search/:Cid" element={<Results datas={data} setData={setData}/>} />
+          {/* <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} /> */}
+       
+      </Routes>
+      </BrowserRouter>
+   </div>
   );
 }
 
