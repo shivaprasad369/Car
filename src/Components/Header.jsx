@@ -1,7 +1,7 @@
 import { SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/clerk-react'
 import React from 'react'
 import { CiMenuFries } from "react-icons/ci";
-import { Link } from 'react-router-dom';
+
 export default function Header() {
     
     function openNav() {
@@ -41,9 +41,7 @@ export default function Header() {
                 <li className='hover:text-orange-400 transition-all tracking-wider' >
                     <a href='/#contact'>Contact</a>
                 </li>
-                <li className='hover:text-orange-400 transition-all tracking-wider' >
-                    <Link to='/panel'>panel</Link>
-                </li>
+               
                 
             </ul>
         </div>
