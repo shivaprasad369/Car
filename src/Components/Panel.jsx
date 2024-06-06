@@ -9,6 +9,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 // import axios from 'axios';
 import Login from './Login';
+import axios from 'axios';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -36,13 +37,11 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
         React.useEffect(()=>
            async()=>{
             // setLoad(true)
-               const d=   await fetch('https://carsbackend-3oe0.onrender.com/api/v1/post',{
-                  method:'GET'
-               })
+               const d= await axios.get('https://carsbackend-3oe0.onrender.com/api/v1/post')
+               console.log(d)
                setData(d.data.data)
-             console.log(data)
               //  setLoad(false)
-               },[data]
+               },[]
                )
            return (
             <>
