@@ -10,6 +10,7 @@ import Place from './Components/Place.jsx';
 // import axios from 'axios';
 import Tac from './Components/Tac.jsx'
 import CustomizedTables from './Components/Panel.jsx';
+import axios from 'axios';
 function App() {
   const [data,setData]=useState({
     From:'',
@@ -20,10 +21,11 @@ function App() {
     PickUpAt:''
 
 })
-// useEffect(()=>{
 
-//   axios.get('http://localhost:8080/api/v1/post').then((data)=>console.log("successfully fetched data")).catch((error)=>console.log(error))
-// },[]);
+useEffect(()=>{
+
+  axios.get('https://carsbackend-3oe0.onrender.com/api/v1/post').then((data)=>console.log("successfully fetched data")).catch((error)=>console.log(error))
+},[]);
   return (
    <div>
     <BrowserRouter>
