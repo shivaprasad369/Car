@@ -19,7 +19,7 @@ export default function Nearest({  setData }) {
   console.log(days.one ? Number(1) : Number(2));
   const datas = data.filter((data) => data.day === day);
   return (
-    <div className="flex flex-col relative mt-[3rem] w-[100vw] justify-center items-center overflow-hidden h-[100%]">
+    <div id="near" className="flex flex-col relative mt-[3rem] w-[100vw] justify-center items-center overflow-hidden h-[100%]">
       <div>
         <h1 className="text-center leading-[35px] mb-[2rem] text-[25px] text-orange-400 font-bold uppercase tracking-wider">
           Nearest place from hubli

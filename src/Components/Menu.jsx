@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebookSquare, FaInstagram, FaYoutube } from 'react-icons/fa'
 import { FaXTwitter } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 export default function Menu() {
   return (
@@ -24,6 +25,7 @@ export default function Menu() {
                 {/* <h3 className='flex gap-10'>Email</h3><span>yourEmail@gmail.com</span> */}
                 <h3 className='font-bold'>Address</h3> <span className='hover:text-orange-400 transition-all cursor-pointer'>Chennamma Circle, Mahaveer Complex, Sadashiv Nagar, Hubballi, Karnataka 580029</span>
                 </div> 
+                <h3 className='md:ml-[7rem] max-md:ml-[3rem]'><Link to='/t&c' className='hover:text-orange-400 transition-all'>Terms and Conditions</Link></h3>
             </div>
             <div className='flex gap-6 justify-center items-center mt-[2rem] text-[2rem]'>
                 <a href="https://www.instagram.com/ganesh_tourist/"><FaInstagram  className='hover:text-orange-400 transition-all'/></a>

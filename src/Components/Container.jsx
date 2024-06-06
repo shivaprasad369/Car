@@ -12,6 +12,7 @@ import Team from './Team'
 import Testimonial from './Testimonial'
 import Nearest from './Nearest'
 import Menu from './Menu'
+// import CustomizedTables from './Planel'
 
 export default function Container({data,setData}) {
   
@@ -24,6 +25,7 @@ export default function Container({data,setData}) {
       <Services/>
       <Team/>
       <Nearest datas={data} setData={setData}/>
+   {/* <CustomizedTables/> */}
       {/* <>
       <GooglePlacesAutocomplete
       apiKey="4daa9bea11msh78f57d6671a1229p102c7ajsne64b93e90ce4"

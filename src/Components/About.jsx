@@ -80,7 +80,9 @@ export default function About() {
             </div>
           </div>
           <button className="border-0 text-white px-[1rem] my-[2rem] py-[8px] bg-orange-400 rounded-md ">
-            Explore more
+          <a href="#near">
+              Explore more
+            </a>
           </button>
         </div>
         <div className="w-[50%] relative max-lg:hidden  rounded-xl">

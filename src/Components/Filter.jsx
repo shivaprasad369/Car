@@ -109,9 +109,9 @@ e.preventDefault();
             type="text"
               name="from"
               id=""
-              value={data ? data.From :''}
+            
               placeholder="From"
-              defaultValue='Hubli'
+           
               onChange={(e)=>setData((data)=>({...data,From:e.target.value,Type:'Round'}))}
               className="lg:w-[100%] max-lg:w-[100%]   px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
            />
@@ -123,8 +123,8 @@ e.preventDefault();
               name="to"
               id=""
               placeholder="To"
-              defaultValue='Dharawad'
-              value={data ? data.TO :''}
+       
+            
               onChange={(e)=>setData((data)=>({...data,TO:e.target.value}))}
               className="lg:w-[100%] max-lg:w-[100%]  max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
            />
@@ -167,9 +167,9 @@ e.preventDefault();
             <input
             type="text"
               name="from"
-              defaultValue={'Hubli'}
+              
               id=""
-              value={data && data.From }
+             
               placeholder="From"
               onChange={(e)=>setData((data)=>({...data,From:e.target.value,ReturnAt:''}))}
               className="lg:w-[100%] max-lg:w-[100%] max-lg:mb-[px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
@@ -181,8 +181,8 @@ e.preventDefault();
             type="text"
               name="to"
               id=""
-              defaultValue={'dharwad'}
-              value={data ? data.TO :''}
+            
+              
               placeholder="To"
               onChange={(e)=>setData((data)=>({...data,TO:e.target.value,Type:'Local'}))}
               className="lg:w-[100%] max-lg:w-[100%] max-lg:mb-[px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
