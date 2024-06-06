@@ -38,9 +38,9 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
             setLoad(true)
                const d=   await axios.get('https://carsbackend-3oe0.onrender.com/api/v1/post')
                setData(d.data.data)
-             console.log(d)
+             console.log(data)
                setLoad(false)
-               },[]
+               },[data]
                )
            return (
             <>
