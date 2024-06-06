@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 export default function Testimonial() {
   return (
-    <div className="flex justify-center w-[100vw] items-center mt-[2rem]">
+    <div id="test" className="flex justify-center w-[100vw] items-center mt-[2rem]">
       <div className="flex gap-10 flex-col justify-center items-center">
         <div>
           <h1 className="text-[14px] text-center leading-[14px] font-[400] text-orange-400 mb-[15px] uppercase tracking-[2px]">
@@ -116,10 +116,10 @@ export default function Testimonial() {
           </div>
           <div className="flex flex-col justify-center items-center px-[1rem] pb-[1rem] text-white font-semibold tracking-wider">
             <p>
-            I recently rented a Toyota Camry from XYZ Car Rentals at their Downtown Branch for a week, and overall, I had a very positive experience.
+            Very good Price for all vehicles and driver Vasant and Sanjeev are very good and well experienced persons.
             </p>
-            <div className="pt-[2rem] text-center">
-                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Shivakumar</h1>
+            <div className="pt-[2rem] text-center absolute bottom-3">
+                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Basava Raddi</h1>
                 <span className="text-[14px] tracking-wider font-thin">Customer</span>
             </div>
           </div>
@@ -179,11 +179,11 @@ export default function Testimonial() {
           </div>
           <div className="flex flex-col justify-center items-center px-[1rem] pb-[1rem] text-white font-semibold tracking-wider">
             <p>
-            Great experience from start to finish. The booking process was easy, and the car was in excellent condition. Customer service was friendly and efficient. Will definitely rent again.
+            Good Service, Fast follow up,good drivers allso, and more importantly trustable.....
             </p>
-            <div className="pt-[2rem] text-center">
-                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Shivu</h1>
-                <span className="text-[14px] tracking-wider font-thin">Vijay</span>
+            <div className="pt-[2rem] text-center absolute bottom-3">
+                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Info Guru</h1>
+                <span className="text-[14px] tracking-wider font-thin">Customer</span>
             </div>
           </div>
         </div>
@@ -245,8 +245,8 @@ export default function Testimonial() {
             <p>
             Very satisfied with the rental. The car performed well and was fuel-efficient. The staff provided clear instructions and were very accommodating. Prices were also reasonable.
             </p>
-            <div className="pt-[2rem] text-center">
-                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Girish Rajur</h1>
+            <div className="pt-[2rem] text-center absolute bottom-3">
+                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Mallikarjun Poojari</h1>
                 <span className="text-[14px] tracking-wider font-thin">Customer</span>
             </div>
           </div>
@@ -309,8 +309,8 @@ export default function Testimonial() {
             <p>
             Excellent rental service! The vehicle was spotless and ran perfectly. The team was professional and attentive, making the whole process seamless. Will use this company again.
             </p>
-            <div className="pt-[2rem] text-center">
-                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Jyoti</h1>
+            <div className="pt-[2rem] text-center absolute bottom-3">
+                <h1 className="text-[18px] uppercase font-bold leading-[15px]">Pundaleek rathod</h1>
                 <span className="text-[14px] tracking-wider font-thin">Customer</span>
             </div>
           </div>

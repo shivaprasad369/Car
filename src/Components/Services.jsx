@@ -3,7 +3,7 @@ import data from './constant/sevice.jsx'
 export default function Services() {
   // const [color,setColor]=useState(false)
   return (
-    <div className="flex w-[100vw] h-[100%] justify-center items-center px-[3%]  xl:px-[10%]">
+    <div id="services" className="flex w-[100vw] h-[100%] justify-center items-center px-[3%]  xl:px-[10%]">
       <div className="max-w-[1400px] flex flex-col justify-center items-center w-full">
         <div>
           <div className="text-[14px] text-center leading-[14px] font-[400] text-orange-500 nb-[15px] tracking-[2px]">

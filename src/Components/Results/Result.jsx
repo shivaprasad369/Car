@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PhoneInput from "react-phone-number-input";
 import { Navigate, useParams } from "react-router-dom";
-import Header from "../Header";
+import Header from "../Headers";
 import data from "../constant/Cars";
 import { RiBillFill } from "react-icons/ri";
 import { FaAirFreshener, FaCircle, FaHourglassHalf, FaIdCardAlt } from "react-icons/fa";
@@ -10,7 +10,9 @@ import {
   MdAirlineSeatLegroomNormal,
   MdAirlineSeatReclineExtra,
 } from "react-icons/md";
+import { Resend } from 'resend';
 import { useSession } from "@clerk/clerk-react";
+import Footer from "../Footer";
 
 export default function Result({ datas }) {
   const [details, setDetails] = useState({
@@ -19,6 +21,12 @@ export default function Result({ datas }) {
     facility: false,
     tc: false,
   });
+const [basic,setBasic] = useState({
+  name:'',
+  email:'',
+  phone:''
+})
+const resend = new Resend('re_GGieA7Rp_BqBCjmijDrcfz7Nm4LtpwbuP');
   const { Cid } = useParams();
  const {session}=useSession()
  const user=session?.user;
@@ -26,18 +34,31 @@ export default function Result({ datas }) {
   const cars = data.filter((data) => data.carId === Number(Cid));
   console.log(cars);
   const [value, setValue] = React.useState("");
+  
+const handleSubmit=async(e)=>{
+  e.preventDefault();
+  await resend.emails.send({
+    from: 'shivu2468sapare@gmail.com',
+    to: 'shivu369sapare@mail.com',
+    subject: 'hello world',
+    react: <h1>Hello world</h1>,
+  });
+    // const d=resend.emails.send(config)
+    // console.log(ds)
 
+ 
+}
   return (
     <div className="w-[100%] ">
       {datas.From === "" && <Navigate to="/" />}
       <Header />
-      <div className="lg:flex max-lg:flex-col pt-[3rem] gap-5 w-[100vw] justify-center items-center">
+      <div className="lg:flex mb-[2rem] max-lg:flex-col pt-[3rem] gap-5 w-[100vw] justify-center items-center">
         <div className="flex flex-col justify-center  bg-slate-200  max-lg:mx-[5%] max-md:mx-[3%] lg:w-[50%] py-[2rem] px-[1rem]  mt-[3rem]  rounded-md gap-3 items-center">
           <h1 className=" tracking-wide font-bold text-[22px]  leading-[35px] uppercase">
             Contact & Pickup detail
           </h1>
           <div className="border-b-[2px] border-orange-400 w-[80%] mb-4" />
-          <form action="" className="flex flex-col gap-5">
+          <form onSubmit={handleSubmit} action="" className="flex flex-col gap-5">
             <div className="flex max-lg:flex-col lg:gap-10 max-lg:gap-2 w-[100%]">
               <label htmlFor="name" className="text-[18px] font-bold">
                 Name
@@ -45,9 +66,10 @@ export default function Result({ datas }) {
               <input
                 type="text"
                 name="name"
-                value={user ? `${user.fullName}` :''}
+                onChange={(e)=>setBasic({...basic,[e.target.name]:e.target.value})}
+                defaultValue={user ? `${user.fullName}` : basic.name}
                 id="name"
-                className="outline-none border-b-[2px] border-gray-300  bg-slate-100 px-2 py-2"
+                className="outline-none w-[100%] border-b-[2px] border-gray-300  bg-slate-100 px-2 py-2"
                 placeholder="Enter your name"
               />
             </div>
@@ -59,19 +81,23 @@ export default function Result({ datas }) {
                 type="email"
                 name="email"
                 id="email"
-                value={user ? 
+                onChange={(e)=>setBasic({...basic,[e.target.name]:e.target.value})}
+                defaultValue={user ? 
                   user.emailAddresses[0].emailAddress
-                  :''}
+                  :basic.email}
                 placeholder="Enter your email"
-                className="outline-none border-b-[2px]  border-gray-300  bg-slate-100 px-2 py-2"
+                className="outline-none border-b-[2px] w-[100%] border-gray-300  bg-slate-100 px-2 py-2"
               />
             </div>
             <div className="flex max-md:flex-col lg:gap-10 max-lg:gap-2 w-[100%]">
               <label className="text-[18px]   font-bold">Mobile</label>
               <PhoneInput
-                value={
-                 user? user.phoneNumbers[0].phoneNumber:value}
+                // onChange={(e)=>setBasic({...basic,phone:e.target.value})}
+                defaultValue={
+                 user? user.phoneNumbers[0].phoneNumber:value
+                }
                 placeholder={"Enter Mobile Number"}
+                name='phone'
                 onChange={setValue}
                 className="flex  border-b-[2px]  border-gray-300 bg-slate-100 px-2 py-2 outline-none"
               />
@@ -84,6 +110,7 @@ export default function Result({ datas }) {
                 type="address"
                 name="Pick up"
                 id="pick up"
+                defaultValue={datas.From}
                 className="flex  ml-[px] w-[100%] border-b-[2px]  border-gray-300 bg-slate-100 px-2 py-2 outline-none"
                 placeholder="Enter your Pickup address"
               />
@@ -95,6 +122,7 @@ export default function Result({ datas }) {
               <input
                 type="text"
                 name="drop"
+             defaultValue={datas.TO}
                 id="drop"
                 className="flex  ml-[7px] w-[100%] border-b-[2px]  border-gray-300 bg-slate-100 px-2 py-2 outline-none"
                 placeholder="Enter your drop address"
@@ -342,6 +370,7 @@ export default function Result({ datas }) {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -13,7 +13,7 @@ import 'swiper/css/effect-fade';
 export default function Banner() {
   return (
     <div className='w-full relative h-[100%] flex justify-center items-center ' >
-      <div className='lg:h-[90vh] h-[100%] overflow-hidden w-[100%] relative '>
+      <div className='lg:h-[100vh] h-[100%] overflow-hidden w-[100%] relative '>
         <div>
         {/* <Swiper
         spaceBetween={30}
@@ -26,7 +26,7 @@ export default function Banner() {
         className="mySwiper"
       >
         <SwiperSlide> */}
-          <img src={require('../Assets/banner.webp')} alt='banner' className='w-[100%] max-md:h-[70vh]'/>
+          <img src={require('../Assets/banner.jpg')} alt='banner' className='w-[100%] max-md:h-[70vh]'/>
         {/* </SwiperSlide>
          <SwiperSlide>
           <img src={require('../Assets/banner1.jpg')} />

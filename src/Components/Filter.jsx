@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+
+import { useEffect, useState } from 'react';
+
 
 export default function Filter({data,setData}) {
     const [form,setForm]=useState({
@@ -9,20 +12,42 @@ export default function Filter({data,setData}) {
         round:false,
     
     })
-    
+  
    
 
     const submitHandle=(e)=>{
 e.preventDefault();
  console.log(data)
     }
+
+
+    const location = useLocation();
+    const pathname = location.pathname;
+    console.log(data)
+    useEffect(() => {
+      // Refresh data here
+     setData('')
+    //  const element = document.getElementById("filter");
+    //  if (element) {
+    //    element.scrollIntoView({ behavior: "smooth" });
+    //  }
+      // Call your API or fetch data here
+      // eslint-disable-next-line
+    }, [pathname,location]);
+ 
+    // useEffect(() => {
+    //   const element = document.getElementById("services");
+    //   if (element) {
+    //     element.scrollIntoView({ behavior: "smooth" });
+    //   }
+    // }, [location]);
   return (
-    <div className="flex justify-center w-[100vw] items-center z-40">
-      <div
+    <div  className="flex justify-center w-[100vw] items-center z-40">
+      <div 
         style={{ zIndex: "inherit" }}
         className="xl:w-[90%] max-xl:w-[100vw] max-lg:px-[2%] flex justify-center mt-[-4rem]  items-center  bg-white shadow-md px-[1rem] pb-[3rem] rounded-lg"
       >
-        <div className="flex gap-5 justify-center items-center flex-col" style={{ zIndex: "inherit" }}>
+        <div  className="flex gap-5 justify-center items-center flex-col" style={{ zIndex: "inherit" }}>
             <div className="flex mx-[3%] justify-center  mt-[1rem] max-lg:h-[4rem] mb-[2rem] rounded-xl w-fit border-2 items-center ">
                 {/* <div className="border-r-2 border-white py-2 bg-orange-400 text-white px-[1rem]">
                     <button onClick={()=>setForm({out:true,round:false,local:false,airport:false})}>Out Station</button>
@@ -37,7 +62,7 @@ e.preventDefault();
                     <button  onClick={()=>setForm({out:false,round:false,local:false,airport:true})}>Airport/Station.(Hubli)</button>
                 </div>
             </div>
-         {form.out  && <form action="" onSubmit={submitHandle} className="lg:flex max-lg:flex-col gap-5">
+         {form.out  && <form action=""  onSubmit={submitHandle} className="lg:flex max-lg:flex-col gap-5">
             <input
             type="text"
               name="from"
@@ -78,22 +103,32 @@ e.preventDefault();
             </button>
           </form>}
           {form.round  && <form action="" onSubmit={submitHandle}  className="lg:flex max-lg:flex-col max-lg:w-[100vw] gap-5">
+          <div className="flex  lg:mt-[-1.4rem] flex-col px-2 lg:w-[30%] max-lg:w-[100%] ">
+            <label htmlFor=" " className="font-bold ">From</label>
             <input
             type="text"
               name="from"
               id=""
+              value={data ? data.From :''}
               placeholder="From"
+              defaultValue='Hubli'
               onChange={(e)=>setData((data)=>({...data,From:e.target.value,Type:'Round'}))}
-              className="lg:w-[30%] max-lg:w-[95vw] max-lg:ml-[2.5vw] max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
-           /><br className="lg:hidden"/>
+              className="lg:w-[100%] max-lg:w-[100%]   px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
+           />
+           </div><br className="lg:hidden"/>
+           <div className="flex lg:mt-[-1.4rem] flex-col lg:w-[30%] max-lg:w-[100%] px-2">
+            <label htmlFor=" " className="font-bold">To</label>
               <input
             type="text"
               name="to"
               id=""
               placeholder="To"
+              defaultValue='Dharawad'
+              value={data ? data.TO :''}
               onChange={(e)=>setData((data)=>({...data,TO:e.target.value}))}
-              className="lg:w-[30%] max-lg:w-[95vw] max-lg:ml-[2.5vw] max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
+              className="lg:w-[100%] max-lg:w-[100%]  max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
            />
+           </div>
            <div className="flex max-lg:mb-[15px] lg:mt-[-1.4rem] flex-col lg:w-[30%] max-lg:w-[95vw] max-xl:ml-[2.5vw]">
             <label htmlFor=" " className="font-bold">Pick Up</label>
             <input
@@ -123,26 +158,36 @@ e.preventDefault();
             </div>
            
             <button className="border-0 lg:w-[20%] w-[30%] rounded-md max-lg:ml-[2.5vw] lg:h-[2rem] max-lg:h-[2.5rem] mt-[0.5rem]  bg-orange-400 lg:text-[15px] text-[18px] font-bold text-white">
-            <Link to={'/search'}>Find cars </Link>
+            <Link to={'/search'} >Find cars </Link>
             </button>
           </form>}
           {form.local && <form action="" onSubmit={submitHandle}  className="lg:flex max-lg:flex-col max-lg:w-[100vw] gap-5">
+          <div className="flex max-lg:mb-[0px] lg:mt-[-1.4rem] flex-col lg:w-[30%] max-lg:w-[95vw] max-xl:ml-[2.5vw]">
+            <label htmlFor=" " className="font-bold">From</label>
             <input
             type="text"
               name="from"
+              defaultValue={'Hubli'}
               id=""
+              value={data && data.From }
               placeholder="From"
               onChange={(e)=>setData((data)=>({...data,From:e.target.value,ReturnAt:''}))}
-              className="lg:w-[30%] max-lg:w-[95vw] max-lg:ml-[2.5vw] max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
-              /><br className="lg:hidden"/>
+              className="lg:w-[100%] max-lg:w-[100%] max-lg:mb-[px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
+              />
+              </div><br className="lg:hidden"/>
+              <div className="flex max-lg:mb-[15px] lg:mt-[-1.4rem] px-2 flex-col lg:w-[30%] max-lg:w-[100%] ">
+            <label htmlFor=" " className="font-bold">To</label>
               <input
             type="text"
               name="to"
               id=""
+              defaultValue={'dharwad'}
+              value={data ? data.TO :''}
               placeholder="To"
               onChange={(e)=>setData((data)=>({...data,TO:e.target.value,Type:'Local'}))}
-              className="lg:w-[30%] max-lg:w-[95vw] max-lg:ml-[2.5vw] max-lg:mb-[15px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
+              className="lg:w-[100%] max-lg:w-[100%] max-lg:mb-[px] px-2 rounded-md h-[3rem] border-[1px] outline-none bg-slate-100"
            />
+           </div>
            <div className="flex max-lg:mb-[15px] lg:mt-[-1.4rem] flex-col lg:w-[30%] max-lg:w-[95vw] max-xl:ml-[2.5vw]">
             <label htmlFor=" " className="font-bold">Pick Up</label>
             <input
