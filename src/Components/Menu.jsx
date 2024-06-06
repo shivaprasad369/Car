@@ -14,7 +14,7 @@ export default function Menu() {
         <div className='md:w-[40%] max-md:text-center mt-[2rem]'>
             <div className='flex flex-col gap-3 '>
                <div className='flex gap-16'>
-                <h3 className='flex gap-10 font-bold'>Email</h3><span className='hover:text-orange-400 cursor-pointer transition-all'>yourEmail@gmail.com</span>
+                <h3 className='flex gap-10 font-bold'>Email</h3><span className='hover:text-orange-400 cursor-pointer transition-all'>sgthubli@gmail.com </span>
                 </div> 
                 <div className='flex gap-14'>
                 {/* <h3 className='flex gap-10'>Email</h3><span>yourEmail@gmail.com</span> */}
