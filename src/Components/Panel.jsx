@@ -32,14 +32,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   export default function CustomizedTables() {
       const [data,setData]=React.useState()
      const [login,setLogin]= React.useState(true)
-      const [load,setLoad]=React.useState(false)
+      // const [load,setLoad]=React.useState(false)
         React.useEffect(()=>
            async()=>{
-            setLoad(true)
+            // setLoad(true)
                const d=   await axios.get('https://carsbackend-3oe0.onrender.com/api/v1/post')
                setData(d.data.data)
              console.log(data)
-               setLoad(false)
+              //  setLoad(false)
                },[data]
                )
            return (
