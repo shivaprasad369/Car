@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Footer from './Footer'
 
 import Header from './Headers'
 import Menu from './Menu'
+import { useLocation } from 'react-router-dom';
 export default function Tac() {
+    const location = useLocation();
+    useEffect(() => {
+      const element = document.getElementById("tac");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, [location]);
   return (
     <>
 <Header/>
-    <div className='w-[100%] px-[10%] flex flex-col gap-4 py-[5rem]'>
+    <div id='tac' className='w-[100%] px-[10%] flex flex-col gap-4 py-[5rem]'>
       <div className='text-[25px] leading-[40px] font-bold tracking-wide text-orange-400'>
         <h1>Terms and Conditions</h1>
       </div>
