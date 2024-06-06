@@ -9,6 +9,7 @@ import Place from './Components/Place.jsx';
 // import CustomizedTables from './Components/Planel.jsx';
 // import axios from 'axios';
 import Tac from './Components/Tac.jsx'
+import CustomizedTables from './Components/Panel.jsx';
 function App() {
   const [data,setData]=useState({
     From:'',
@@ -33,8 +34,8 @@ function App() {
           <Route path="t&c" element={ <Tac/>} />
           <Route path="search/:Cid" element={<Results datas={data} setData={setData}/>} />
           <Route path="location/:id" element={<Place datas={data} setData={setData}/>} />
-          {/* <Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> */}
+          {/* {/* <Route path="contact" element={<Contact />} /> */}
+          <Route path="/panel" element={<CustomizedTables />} />
        
       </Routes>
       </BrowserRouter>
