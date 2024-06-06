@@ -45,7 +45,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
            return (
             <>
             <Login login={login} setLogin={setLogin}/>
-    {!load && !login &&
+
     <TableContainer component={Paper} className='px-[3%]'>
         <h1 className='text-[25px] font-bold text-orange-400 text-center uppercase py-[2rem]'>Customer Information</h1>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -88,7 +88,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
         </TableBody>
       </Table>
     </TableContainer>
-  } 
+ 
     </>
   );
 }
