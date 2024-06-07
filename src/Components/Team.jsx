@@ -55,7 +55,7 @@ export default function Team() {
         </div>
         <div className="flex  mt-[-2rem] md:justify-center max-md:justify-around items-center w-[100%] md:gap-28">
             <div className="flex max-md:w-[45%] flex-col justify-center items-center gap-2">
-                <h3 className="md:text-[18px] max-md:text-[13px] md:leading-[30px] font-bold tracking-wider uppercase cursor-pointer hover:text-orange-400 transition-all">Founders </h3>
+                <h3 className="md:text-[18px] max-md:text-[13px] md:leading-[30px] font-bold tracking-wider uppercase cursor-pointer hover:text-orange-400 transition-all">Managing patners </h3>
                 <div className="flex flex-col max-md:text-[13px] md:gap-3 max-md:gap-2 mt-4">
                 {/* eslint-disable-next-line */}
                     <span className="flex gap-2 items-center"><h4 className="w-[1rem] h-[1rem] rounded-full bg-orange-400"></h4>Mr Sumant M Shetty</span>
@@ -69,7 +69,7 @@ export default function Team() {
             {/* eslint-disable-next-line */}
             <span className="flex gap-2 items-center"><h4 className="w-[1rem] h-[1rem] rounded-full bg-orange-400"></h4>Mr Guru Hiremath</span>
             {/* eslint-disable-next-line */}
-            <span className="flex gap-2  items-center"><h4 className="w-[1rem] h-[1rem] rounded-full bg-orange-400"></h4>Mr Nishant M Shetty</span>
+            <span className="flex gap-2  items-center"><h4 className="w-[1rem] h-[1rem] rounded-full bg-orange-400"></h4>Mr Manjunath H</span>
             
             {/* eslint-disable-next-line */}
             <span className="flex gap-2  items-center"><h4 className="w-[1rem] h-[1rem] rounded-full bg-orange-400"></h4>Miss Sanjana</span>
