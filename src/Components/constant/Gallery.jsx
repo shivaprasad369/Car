@@ -15,7 +15,12 @@ import img14 from '../../Assets/Gallert.jsx/14.jpeg'
 import img15 from '../../Assets/Gallert.jsx/15.jpeg'
 import img16 from '../../Assets/Gallert.jsx/16.jpeg'
 import img17 from '../../Assets/Gallert.jsx/17.jpeg'
-// import img18 from '../../Assets/Gallert.jsx/18.jpeg'
+import img18 from '../../Assets/Gallert.jsx/18.jpeg'
+import img19 from '../../Assets/Gallert.jsx/19.jpeg'
+
+import img20 from '../../Assets/Gallert.jsx/21.jpeg'
+import img21 from '../../Assets/Gallert.jsx/20.jpeg'
+
 
 
 const data=[
@@ -55,7 +60,7 @@ const data=[
         img:img12
     },
     {
-        img:img12
+        img:img21
     },
     {
         img:img13
@@ -72,8 +77,15 @@ const data=[
     {
         img:img17
     },
-    // {
-    //     img:img18
-    // }
+    {
+        img:img18
+    },
+    {
+        img:img19
+    }
+    ,
+    {
+        img:img20
+    }
 ]
 export default data;

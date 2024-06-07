@@ -32,7 +32,7 @@ export default function Banner() {
           <img  src={require('../Assets/banner3.jpg')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
         </SwiperSlide>
          <SwiperSlide className='max-md:hidden'>
-          <img src={require('../Assets/Gallert.jsx/3.jpeg')} alt='banner' className='w-[100%] md:hidden  object-cover md:h-[100vh] max-md:h-[70vh]'/>
+          <img src={require('../Assets/ban3.png')} alt='banner' className='w-[100%] md:hidden  object-cover md:h-[100vh] max-md:h-[70vh]'/>
         
         </SwiperSlide>
         {/* <SwiperSlide className='md:hidden '>
@@ -40,7 +40,7 @@ export default function Banner() {
 
         </SwiperSlide> */}
         <SwiperSlide>
-          <img src={require('../Assets/Gallert.jsx/5.jpeg')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
+          <img src={require('../Assets/ban2.png')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
