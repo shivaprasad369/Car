@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { EffectFade, Autoplay,Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Autoplay } from 'swiper/modules';
 
 export default function Banner() {
   return (
@@ -31,10 +31,10 @@ export default function Banner() {
           <img src={require('../Assets/banners.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
         </SwiperSlide>
          <SwiperSlide>
-          <img src={require('../Assets/banner2.jpg')} />
+          <img src={require('../Assets/banner2.jpg')} alt='banner'/>
         </SwiperSlide>
         <SwiperSlide>
-          <img  src={require('../Assets/banner3.jpg')}  />
+          <img  src={require('../Assets/banner3.jpg')} alt='banner' />
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
