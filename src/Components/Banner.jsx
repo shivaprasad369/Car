@@ -27,14 +27,15 @@ export default function Banner() {
         modules={[EffectFade,Autoplay]}
         className="mySwiper"
       >
+    
         <SwiperSlide>
-          <img src={require('../Assets/banners.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
+          <img  src={require('../Assets/banner3.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
         </SwiperSlide>
          <SwiperSlide>
-          <img src={require('../Assets/banner2.jpg')} alt='banner'/>
+          <img src={require('../Assets/banner2.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
         </SwiperSlide>
         <SwiperSlide>
-          <img  src={require('../Assets/banner3.jpg')} alt='banner' />
+          <img src={require('../Assets/banners.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />

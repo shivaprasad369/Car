@@ -17,7 +17,7 @@ export default function Header() {
        <div className='flex justify-between text-white items-center align-middle max-md:pt-[0.7rem] md:pt-[0.5rem]'>
         <div className=' flex  gap-2 justify-center items-center '>
             <img src={require('../Assets/kogo.png')} className='md:w-[5rem] max-md:w-[4rem]' alt="" />
-            <h1 className='text-[30px] font-bold text-orange-400  leading-[30px] uppercase'>Sri Ganesh<br/> <span  className='text-[20px] leading-[20px] text-white'>Tours & Travels </span></h1>
+            <h1 className='md:text-[30px] font-bold text-orange-400  md:leading-[30px] max-md:leading-[15px] uppercase max-md:text-[17px]'>Sri Ganesh<br/> <span  className='md:text-[20px] md:leading-[20px] max-md:text-[10px] text-white'>Tours & Travels </span></h1>
         </div>
         <div className='text-[18px] font-[700] ml-[10%] max-lg:hidden leading-[30px] capitalize'>
             <ul className='flex gap-5'>
