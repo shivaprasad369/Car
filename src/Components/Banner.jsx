@@ -11,7 +11,7 @@ import { EffectFade, Autoplay } from 'swiper/modules';
 export default function Banner() {
   return (
     <div className='w-full relative h-[100%] flex justify-center items-center ' >
-      <div className=' h-[100vh] overflow-hidden w-[100%] relative '>
+      <div className=' md:h-[100vh] overflow-hidden w-[100%] relative '>
         <div>
         <Swiper
         spaceBetween={30}
@@ -29,13 +29,18 @@ export default function Banner() {
       >
     
         <SwiperSlide>
-          <img  src={require('../Assets/banner3.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
+          <img  src={require('../Assets/banner3.jpg')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
         </SwiperSlide>
-         <SwiperSlide>
-          <img src={require('../Assets/banner2.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
+         <SwiperSlide className='max-md:hidden'>
+          <img src={require('../Assets/Gallert.jsx/3.jpeg')} alt='banner' className='w-[100%] md:hidden  object-cover md:h-[100vh] max-md:h-[70vh]'/>
+        
         </SwiperSlide>
+        {/* <SwiperSlide className='md:hidden '>
+          <img src={require('../Assets/Gallert.jsx/1.jpeg')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
+
+        </SwiperSlide> */}
         <SwiperSlide>
-          <img src={require('../Assets/banners.jpg')} alt='banner' className='w-[100%] object-cover h-[100vh]'/>
+          <img src={require('../Assets/Gallert.jsx/5.jpeg')} alt='banner' className='w-[100%] object-cover md:h-[100vh] max-md:h-[70vh]'/>
         </SwiperSlide>
         {/* <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
