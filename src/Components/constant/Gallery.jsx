@@ -15,7 +15,7 @@ import img14 from '../../Assets/Gallert.jsx/14.jpeg'
 import img15 from '../../Assets/Gallert.jsx/15.jpeg'
 import img16 from '../../Assets/Gallert.jsx/16.jpeg'
 import img17 from '../../Assets/Gallert.jsx/17.jpeg'
-import img18 from '../../Assets/Gallert.jsx/18.jpeg'
+// import img18 from '../../Assets/Gallert.jsx/18.jpeg'
 
 
 const data=[
