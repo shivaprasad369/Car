@@ -35,14 +35,14 @@ export default function About() {
         </div>
         <div className="lg:w-[50%] w-[100%]">
           <div className="text-[15px] lg:leading-[15px] text-orange-400 font-[500] mb-[15px] tracking-[2px]">
-            Shri Ganesh Travels
+            Sri Ganesh Travels
           </div>
           <div className="md:text-[35px] text-[30px] mb-[15px] font-[700] max-lg:mt-[-1rem] leading-[1.25em]  ">
             We Are More Than <br />
             <span className="text-orange-400">A Car Rental Company</span>
           </div>
           <p className="mb-[30px] text-[15px] leading-[1.95em] font-[400]  w-[90%]">
-            Founded in 1996 by Mr. Mahesh and Mr. Prakash, Ganesh Travels began
+            Founded in 1996 by Mr. Mahesh and Mr. Prakash, Sri Ganesh Travels began
             with just two vehicles and has since expanded to a robust fleet of
             over 100. Catering to individuals, families, business travelers, and
             large groups across Karnataka and neighboring states, our services

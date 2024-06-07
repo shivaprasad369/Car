@@ -19,7 +19,7 @@ export default function Menu() {
                 </div> 
                 <div className='flex gap-14'>
                 {/* <h3 className='flex gap-10'>Email</h3><span>yourEmail@gmail.com</span> */}
-                <h3 className='font-bold'>Phone</h3><span className='hover:text-orange-400 transition-all cursor-pointer'>+91 836 225 1917</span>
+                <h3 className='font-bold'>Phone</h3><span className='hover:text-orange-400 transition-all cursor-pointer'>+91 8362372747</span>
                 </div> 
                 <div className='flex gap-10'>
                 {/* <h3 className='flex gap-10'>Email</h3><span>yourEmail@gmail.com</span> */}

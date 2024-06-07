@@ -34,13 +34,7 @@ e.preventDefault();
       // Call your API or fetch data here
       // eslint-disable-next-line
     }, [pathname,location]);
- 
-    // useEffect(() => {
-    //   const element = document.getElementById("services");
-    //   if (element) {
-    //     element.scrollIntoView({ behavior: "smooth" });
-    //   }
-    // }, [location]);
+
   return (
     <div  className="flex justify-center w-[100vw] items-center z-40">
       <div 

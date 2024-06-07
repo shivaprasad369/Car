@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useParams } from 'react-router-dom'
 import data from './constant/Place'
 import Footer from './Footer'
-import Header from './Header'
+import Header from './Headers'
 export default function Place({datas,setData}) {
     const {id}=useParams()
     const dt=data.filter((data)=>data.id===Number(id))

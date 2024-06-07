@@ -165,7 +165,7 @@ export default function Tac() {
             <div className='tracking-wider mt-[1rem]'>
                 <ul style={{listStyleType:'disc'}} className='list-disc ml-[3rem] flex-col gap-2  opacity-[0.8]'>
                     <li className='3'><h1 className=''>
-                    These Terms constitute the entire agreement between you and Shri Ganesh Travels.</h1>
+                    These Terms constitute the entire agreement between you and Sri Ganesh Travels.</h1>
 
                     </li>
                     <li>We may amend these Terms at any time, and any changes will be communicated to you.</li>

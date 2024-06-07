@@ -1,28 +1,5 @@
 const data = [
-  {
-    carId: 1,
-    name: "Swift Dzire",
-    type: "Local",
-    price: [
-      {
-        4: {
-          "40km": 1200,
-        },
-        8: {
-          "80km": 2200,
-        },
-      },
-    ],
-    Exclusive: {
-      Hour: 60,
-      km: 11,
-    },
-    facilities: {
-      seats: 4,
-      AC: true,
-    },
-    Photo: "swift.png",
-  },
+  
   {
     carId: 2,
     name: "Toyota Etios",
@@ -46,6 +23,30 @@ const data = [
       AC: true,
     },
     Photo: "toyota-etios.png",
+  },
+  {
+    carId: 1,
+    name: "Swift Dzire",
+    type: "Local",
+    price: [
+      {
+        4: {
+          "40km": 1200,
+        },
+        8: {
+          "80km": 2200,
+        },
+      },
+    ],
+    Exclusive: {
+      Hour: 60,
+      km: 11,
+    },
+    facilities: {
+      seats: 4,
+      AC: true,
+    },
+    Photo: "swift.png",
   },
   {
     carId: 3,
@@ -90,7 +91,7 @@ const data = [
       km: 16,
     },
     facilities: {
-      seats: 6,
+      seats: 7,
       AC: true,
     },
     Photo: "Innova.png",
@@ -114,7 +115,7 @@ const data = [
       km: 16,
     },
     facilities: {
-      seats: 6,
+      seats: 7,
       AC: true,
     },
     Photo: "toyotaCryst.png",
@@ -143,30 +144,30 @@ const data = [
     },
     Photo: "swift.png",
   },
-  {
-    carId: 7,
-    name: "Indigo",
-    type: "Airport",
-    price: [
-      {
-        4: {
-          "40km": 700,
-        },
-        8: {
-          "80km": 700,
-        },
-      },
-    ],
-    // Exclusive: {
-    //   Hour: 70,
-    //   km: 16,
-    // },
-    facilities: {
-      seats: 4,
-      AC: true,
-    },
-    Photo: "indigo.png",
-  },
+  // {
+  //   carId: 7,
+  //   name: "Indigo",
+  //   type: "Airport",
+  //   price: [
+  //     {
+  //       4: {
+  //         "40km": 700,
+  //       },
+  //       8: {
+  //         "80km": 700,
+  //       },
+  //     },
+  //   ],
+  //   // Exclusive: {
+  //   //   Hour: 70,
+  //   //   km: 16,
+  //   // },
+  //   facilities: {
+  //     seats: 4,
+  //     AC: true,
+  //   },
+  //   Photo: "indigo.png",
+  // },
   {
     carId: 8,
     name: "Innova",
@@ -210,7 +211,7 @@ const data = [
     //   km: 16,
     // },
     facilities: {
-      seats: 7,
+      seats: 8,
       AC: true,
     },
     Photo: "Tavera.png",
@@ -301,90 +302,7 @@ const data = [
     },
     Photo: "hondacity.png",
   },
-  {
-    carId: 21,
-    name: <h1 className="text-[20px] leading-[25px]">Cruizer<br/><span className="text-[14px] text-gray-500 tracking-wider ">Non A/C <br /> <b>14 seater</b></span></h1>,
-    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
-    type: "Round",
-    price: [
-      {
-        4: {
-          "40km": <div>
-             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
-          </div>,
-        },
-        8: {
-          "80km": <div>
-          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.15 Per km.</span></h1>
-        </div>,
-        },
-      },
-    ],
-    Exclusive: {
-     Batta:300
-    },
-    facilities: {
-      seats: 14,
-      AC: false,
-    },
-    Photo: "Crusor.png",
-  },
-  {
-    carId: 22,
-    name: <h1 className="text-[20px] leading-[25px]">Tavera<br/><span className="text-[14px] text-gray-500 tracking-wider ">Non A/C <br /> <b>10 seater</b></span></h1>,
-    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
-    type: "Round",
-    price: [
-      {
-        4: {
-          "40km": <div>
-             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
-          </div>,
-        },
-        8: {
-          "80km": <div>
-          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.14 Per km.</span></h1>
-        </div>,
-        },
-      },
-    ],
-    Exclusive: {
-     Batta:300
-    },
-    facilities: {
-      seats: 10,
-      AC: false,
-    },
-    Photo: "Tavera.png",
-  },
-  {
-    carId: 23,
-    name: <h1 className="text-[20px] leading-[25px]">Tavera<br/><span className="text-[14px] text-gray-500 tracking-wider ">A/C <br /> <b>14 seater</b></span></h1>,
-    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
-    type: "Round",
-    price: [
-      {
-        4: {
-          "40km": <div>
-             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
-          </div>,
-        },
-        8: {
-          "80km": <div>
-          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.15 Per km.</span></h1>
-        </div>,
-        },
-      },
-    ],
-    Exclusive: {
-     Batta:300
-    },
-    facilities: {
-      seats: 15,
-      AC: true,
-    },
-    Photo: "Tavera.png",
-  },
+ 
   {
     carId: 24,
     name: <h1 className="text-[20px] leading-[25px]">Innova<br/><span className="text-[14px] text-gray-500 tracking-wider "> <br /> <b>7 seater</b></span></h1>,
@@ -440,6 +358,90 @@ const data = [
       AC: true,
     },
     Photo: "toyotaCryst.png",
+  },
+  {
+    carId: 22,
+    name: <h1 className="text-[20px] leading-[25px]">Tavera<br/><span className="text-[14px] text-gray-500 tracking-wider ">Non A/C <br /> <b>8 seater</b></span></h1>,
+    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
+    type: "Round",
+    price: [
+      {
+        4: {
+          "40km": <div>
+             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
+          </div>,
+        },
+        8: {
+          "80km": <div>
+          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.14 Per km.</span></h1>
+        </div>,
+        },
+      },
+    ],
+    Exclusive: {
+     Batta:300
+    },
+    facilities: {
+      seats: 8,
+      AC: false,
+    },
+    Photo: "Tavera.png",
+  },
+  {
+    carId: 23,
+    name: <h1 className="text-[20px] leading-[25px]">Tavera<br/><span className="text-[14px] text-gray-500 tracking-wider ">A/C <br /> <b>8 seater</b></span></h1>,
+    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
+    type: "Round",
+    price: [
+      {
+        4: {
+          "40km": <div>
+             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
+          </div>,
+        },
+        8: {
+          "80km": <div>
+          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.15 Per km.</span></h1>
+        </div>,
+        },
+      },
+    ],
+    Exclusive: {
+     Batta:300
+    },
+    facilities: {
+      seats: 8,
+      AC: true,
+    },
+    Photo: "Tavera.png",
+  },
+  {
+    carId: 21,
+    name: <h1 className="text-[20px] leading-[25px]">Cruizer<br/><span className="text-[14px] text-gray-500 tracking-wider ">Non A/C <br /> <b>14 seater</b></span></h1>,
+    // name: <h1> Bus<br/><span>A/C 49 seater</span></h1>,
+    type: "Round",
+    price: [
+      {
+        4: {
+          "40km": <div>
+             <h1 className="leading-[25px]">Per Day 400km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.55 Per km.</span></h1>
+          </div>,
+        },
+        8: {
+          "80km": <div>
+          <h1 className="leading-[25px]">Per Day 300km <br /> <span  className="text-[14px] text-gray-500 font-bold">Rs.15 Per km.</span></h1>
+        </div>,
+        },
+      },
+    ],
+    Exclusive: {
+     Batta:300
+    },
+    facilities: {
+      seats: 14,
+      AC: false,
+    },
+    Photo: "Crusor.png",
   },
   {
     carId: 10,

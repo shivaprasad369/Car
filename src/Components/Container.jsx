@@ -12,6 +12,7 @@ import Team from './Team'
 import Testimonial from './Testimonial'
 import Nearest from './Nearest'
 import Menu from './Menu'
+import QuiltedImageList from './Gallery'
 // import CustomizedTables from './Planel'
 
 export default function Container({data,setData}) {
@@ -24,6 +25,7 @@ export default function Container({data,setData}) {
       <About/>
       <Services/>
       <Team/>
+      <QuiltedImageList/>
       <Nearest datas={data} setData={setData}/>
    {/* <CustomizedTables/> */}
       {/* <>

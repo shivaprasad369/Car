@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import data from '../constant/Cars'
 import { Link, Navigate, redirect } from 'react-router-dom'
 import Header from '../Headers'
+import Menu from '../Menu'
 import Footer from '../Footer'
 export default function Searchs({datas,setData}) {
   console.log(data)
@@ -98,6 +99,7 @@ console.log(datas)
     <Navigate to="/"  />
    }
     </div>
+    <Menu/>
     <Footer/>
     </>
   )

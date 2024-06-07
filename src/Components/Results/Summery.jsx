@@ -12,7 +12,7 @@ export default function Summery({ datas }) {
             alt="order"
             className="w-[5rem] mb-4 "
           />
-          <h1 className="uppercase">Shri ganesh travel.</h1>
+          <h1 className="uppercase">Sri ganesh travels.</h1>
           <p>yourEmail@gmail.com.</p>
           <p>+91 836 225 1917.</p>
           <p>
